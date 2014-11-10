@@ -1,5 +1,4 @@
 #include <Python/Python.h>
-#include <stdio.h> /* for printf*/
 
 PyDoc_STRVAR(di_di_doc,
              "Given the result of id(), returns a Python object reference.");
@@ -29,7 +28,8 @@ di_ref_by_id(PyObject *self, PyObject *args)
 
     refcount = PyInt_FromLong(Py_REFCNT(obj));
 
-    Py_INCREF(refcount); /* Is this required? */
+    // Py_INCREF(refcount); /* Is this required? */
+    //                      /* doesn't matter much -- small ints are interned anyway*/
     return refcount;
 }
 
