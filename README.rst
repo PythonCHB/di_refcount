@@ -1,13 +1,16 @@
 Copyright 2007 Bill Bumgarner All Rights Reserved.
+
 Copyright 2014 Christopher Barker All Rights Reserved.
 
 MIT License -- Free as in "free".
-
 
 This is a verison of Bill Bumgarner's "di" module.
 
 http://www.friday.com/bbum/2007/08/24/python-di/
 http://svn.red-bean.com/bbum/trunk/hacques/di/
+
+Summary
+--------
 
 This is the di module as is, with the addition of another function::
 
@@ -26,7 +29,11 @@ their reference count info in the usual way.
 Note that both of these functions are very dangerous -- if you pass in
 an invalid id, you can (will!) get a segmentation fault and a hard crash.
 
-Usage::
+
+Usage
+------
+
+::
 
     >>> obj = {'a' : 'b', 1 : 2}
     >>> from di import di, ref_by_id
